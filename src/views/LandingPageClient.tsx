@@ -1,12 +1,12 @@
 'use client'
 import { samimFont } from '@/assets/fonts'
-import { Button } from '@mui/material'
-import { FormEvent, startTransition, useActionState, useEffect, useState } from 'react'
-import CustomInput, { ICustomInput } from './dashboard/CustomInput'
-import FormWrapper from './dashboard/custom-form/FormWrapper'
-import { toast } from 'sonner'
 import { CreateProductActionType, UpdateLandingReportDataType } from '@/types/pages/main/product/product-type'
 import { updateLandingReportAction } from '@/utils/server-actions'
+import { Button } from '@mui/material'
+import { useRouter } from 'next/navigation'
+import { FormEvent, startTransition, useActionState, useEffect, useState } from 'react'
+import { toast } from 'sonner'
+import CustomInput, { ICustomInput } from './dashboard/CustomInput'
 
 const LandingInputComp = ({
   titleText,
@@ -40,7 +40,7 @@ const LandingInputComp = ({
   )
 }
 
-const LandingPageClient = () => {
+const LandingPageClient = ({ tokenValue }: { tokenValue: string }) => {
   const [btnText, setBtnText] = useState<string>('نمایش محتوای فعلی')
   const [inputData, setInputData] = useState<ICustomInput[]>([
     {
@@ -222,6 +222,7 @@ const LandingPageClient = () => {
     updateLandingReportAction,
     updateReportInitialState
   )
+  const router = useRouter()
 
   const submitHandler = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault()
@@ -325,6 +326,12 @@ const LandingPageClient = () => {
       toast(updateReportState.message)
     }
   }, [updateReportState])
+
+  useEffect(() => {
+    if (tokenValue == '') {
+      router.push('/login')
+    }
+  }, [tokenValue])
 
   return (
     <div>

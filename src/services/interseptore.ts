@@ -1,5 +1,5 @@
 import axios from 'axios'
-const baseUrl = 'http://localhost:4001/project/api'
+const baseUrl = 'https://goshtdamdaran-aplication-api.liara.run/project/api'
 // https://goshtdamdaran-aplication-api.liara.run/project/api
 
 export const http = axios.create({

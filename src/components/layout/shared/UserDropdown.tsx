@@ -21,6 +21,8 @@ import Divider from '@mui/material/Divider'
 import MenuItem from '@mui/material/MenuItem'
 import Button from '@mui/material/Button'
 import { samimFont } from '@/assets/fonts'
+import { deleteCookies } from '@/utils/server-actions'
+// import { cookies } from 'next/headers'
 
 // Styled component for badge content
 const BadgeContentSpan = styled('span')({
@@ -56,6 +58,10 @@ const UserDropdown = () => {
     }
 
     setOpen(false)
+    // const cookiesStore = await cookies()
+    // cookiesStore.delete("mehrabProjectAccessToken")
+    // document.cookie = "token=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+    deleteCookies("mehrabProjectAccessToken")
   }
 
   return (

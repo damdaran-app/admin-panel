@@ -167,7 +167,7 @@ export const adminLoginAction = async (
   console.log('password ===>', password)
 
   const response = await loginAdmin({ emailOrPhoneNumber, password })
-  // console.log('login response data ==>', response)
+  console.log('login response data ==>', response)
   const cookiesStore = await cookies()
   cookiesStore.set('mehrabProjectAccessToken', response.data?.token ?? '')
   return {
@@ -175,4 +175,10 @@ export const adminLoginAction = async (
     message: response.message ?? '',
     data: response.data
   }
+}
+
+
+export const deleteCookies = async (key: string) => {
+  const cookiesStore = await cookies()
+  cookiesStore.delete(key)
 }

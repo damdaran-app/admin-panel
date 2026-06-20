@@ -94,6 +94,8 @@ const Login = ({ mode }: { mode: Mode }) => {
     }
   }, [loginActionState])
 
+  console.log("loginActionState ==>", loginActionState)
+
   return (
     <div className='flex flex-col justify-center items-center min-bs-[100dvh] relative p-6'>
       <Card className='flex flex-col sm:is-[450px]'>

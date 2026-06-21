@@ -32,7 +32,7 @@ const ProductPage = async ({ searchParams }: TProps) => {
       </>
     )
   } else {
-    ;<Warnning message='مشکلی در دریافت اطلاعات پیش امد لطفا صفحه را رفرش کنید' />
+    <Warnning message='مشکلی در دریافت اطلاعات پیش امد لطفا صفحه را رفرش کنید' />
   }
 }
 

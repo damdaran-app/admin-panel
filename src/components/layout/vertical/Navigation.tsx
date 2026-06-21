@@ -19,6 +19,7 @@ import useVerticalNav from '@menu/hooks/useVerticalNav'
 
 // Style Imports
 import navigationCustomStyles from '@core/styles/vertical/navigationCustomStyles'
+import { Archive } from '@gravity-ui/icons'
 
 const StyledBoxForShadow = styled('div')(({ theme }) => ({
   top: 60,
@@ -68,7 +69,8 @@ const Navigation = () => {
         <Link href='/'>
           <Logo />
         </Link>
-        {isBreakpointReached && <i className='ri-close-line text-xl' onClick={() => toggleVerticalNav(false)} />}
+        {/* <Archive onClick={() => toggleVerticalNav(false)}/> */}
+        {/* <i className='ri-close-line text-xl' onClick={() => toggleVerticalNav(false)} /> */}
       </NavHeader>
       <StyledBoxForShadow ref={shadowRef} />
       <VerticalMenu scrollMenu={scrollMenu} />

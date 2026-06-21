@@ -35,10 +35,10 @@ const NavbarContent = () => {
             src={`https://img.shields.io/github/stars/themeselection/${process.env.NEXT_PUBLIC_REPO_NAME}`}
           /> */}
         </Link>
-        {/* <ModeDropdown /> */}
-        {/* <IconButton className='text-textPrimary'>
+        <ModeDropdown />
+        <IconButton className='text-textPrimary'>
           <i className='ri-notification-2-line' />
-        </IconButton> */}
+        </IconButton>
         <UserDropdown />
       </div>
     </div>

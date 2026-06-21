@@ -9,7 +9,7 @@ import type { ChildrenType } from '@core/types'
 import '@/app/globals.css'
 
 // Generated Icon CSS Imports
-import '@assets/iconify-icons/generated-icons.css'
+// import '@assets/iconify-icons/generated-icons.css'
 import { Toaster } from 'sonner'
 
 export const samimFont = fontLocal({

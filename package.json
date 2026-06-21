@@ -10,7 +10,7 @@
     "lint": "next lint",
     "lint:fix": "next lint --fix",
     "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx}\"",
-    "build:icons": "tsx src/assets/iconify-icons/bundle-icons-css.ts",
+    "build:icons": "tsx ./src/assets/iconify-icons/bundle-icons-css.ts",
     "postinstall": "npm run build:icons"
   },
   "dependencies": {
@@ -20,6 +20,7 @@
     "@gravity-ui/icons": "^2.18.0",
     "@heroui/react": "^3.1.0",
     "@heroui/system": "^2.4.28",
+    "@heroui/theme": "^2.4.26",
     "@mui/lab": "5.0.0-alpha.170",
     "@mui/material": "^5.15.19",
     "@mui/material-nextjs": "^5.15.11",
@@ -27,6 +28,7 @@
     "axios": "^1.15.0",
     "classnames": "^2.5.1",
     "formik": "^2.4.9",
+    "framer-motion": "^12.40.0",
     "next": "^16.2.7",
     "react": "^18.3.1",
     "react-apexcharts": "^1.4.1",
